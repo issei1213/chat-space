@@ -58,8 +58,8 @@ Things you may want to cover:
 ## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|mediumblob||
+|body|string||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
