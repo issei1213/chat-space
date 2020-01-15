@@ -27,27 +27,26 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
-|name|varchar(100)|null: false, unique: true, add_index|
-|email|varchar(255)|null: false, unique: true|
-|password|varchar(255)|null: false, unique: true|
+|name|string|null: false, unique: true, add_index|
+|email|string|null: false, unique: true|
+|password|string|null: false, unique: true|
 ### Association
 - has_many :groups, through: :users_groups
+- has_many :users_groups
 - has_many :chats
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
-|name|varchar(100)|null: false, foreign_key: true, add_index|
+|name|string|null: false, add_index|
 ### Association
 - has_many :users through: :users_groups
+- has_many :users_groups
 - has_many :chats
 
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -59,7 +58,6 @@ Things you may want to cover:
 ## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
 |body|text|null: false|
 |image|mediumblob||
 |user_id|integer|null: false, foreign_key: true|
