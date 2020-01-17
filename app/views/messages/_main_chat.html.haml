@@ -1,0 +1,54 @@
+.chat-main
+
+  .chat-main__group-info
+    .chat-main__group-info__top-left
+      .chat-main__group-info__top-left__group-name
+        グループ名
+      .chat-main__group-info__top-left__group-member
+        %ul
+          %li グループ参加者:
+          %li issei
+          %li ota
+          %li hujimoto
+
+    = link_to 'Edit','#', class: "chat-main__group-info__top-right"
+
+  .chat-main__message-list
+    .chat-main__message-list__middle-items-top
+      .chat-main__message-list__middle-items-top__user-name
+        masa1
+
+      .chat-main__message-list__middle-items-top__send-datetime
+        2020/01/17(Fri) 12:55:10
+
+    .chat-main__message-list__middle-items-message
+      こんにちは1
+
+    .chat-main__message-list__middle-items-top
+      .chat-main__message-list__middle-items-top__user-name
+        masa2
+
+      .chat-main__message-list__middle-items-top__send-datetime
+        2020/01/17(Fri) 12:55:10
+
+    .chat-main__message-list__middle-items-message
+      こんにちは2
+
+    .chat-main__message-list__middle-items-top
+      .chat-main__message-list__middle-items-top__user-name
+        masa3
+
+      .chat-main__message-list__middle-items-top__send-datetime
+        2020/01/17(Fri) 12:55:10
+
+    .chat-main__message-list__middle-items-message
+      こんにちは3
+
+  .chat-main__message-form
+    .chat-main__message-form__bottom-items-left
+      %input.chat-main__message-form__bottom-items-left__message{type: "text", placeholder: "type a message"}
+      %label{class: "chat-main__message-form__bottom-items-left__icon"}
+        = icon('fas', 'image')
+        %input{type: "file"}
+        
+    = link_to 'Send','#',class: "chat-main__message-form__bottom-items-right"
