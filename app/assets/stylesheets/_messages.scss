@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +11,7 @@
 .side-bar{
   width: 300px;
   height: 100vh;
-  color: #ffffff;
+  color: $color-white;
   &__user-name{
     height: 100px;
     background-color: #253141;
@@ -37,7 +39,7 @@
               a{
                 text-decoration: none;
                 i{
-                  color: #ffffff;
+                  color: $color-white;
                   padding-left: 2.5px;
                 }
               }
@@ -69,7 +71,7 @@
   height: 100vh;
   &__group-info{
     height: 100px;
-    background-color: #ffffff;
+    background-color: $color-white;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
@@ -144,7 +146,7 @@
         display: flex;
         justify-content:space-between;
         margin: 20px 15px 20px 40px;
-        background-color: #ffffff;
+        background-color: $color-white;
         position: relative;
         &__message{
           padding-left: 10px;
@@ -172,7 +174,7 @@
         text-align: center;
         line-height: 50px;
         text-decoration: none;
-        color: white;
+        color: $color-white;
       }
   }
 }
