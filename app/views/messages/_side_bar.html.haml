@@ -3,11 +3,11 @@
   .side-bar__user-name
     .side-bar__user-name__top-items
       .side-bar__user-name__top-items__name
-        masa
+        = current_user.name
       .side-bar__user-name__top-items__icons
         = link_to "#" do
           %i.fa.fa-edit
-        = link_to "#1" do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
 
   .side-bar__group-list
