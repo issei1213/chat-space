@@ -50,17 +50,23 @@
   &__group-list{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    &__bottom-items{
+    .group{
       height: 65px;
       margin: 0px 20px 0px 20px;
-      &__group-name{
-        padding-top: 20px;
-        font-size: 15px;
-      }
-      &__new-message{
-        height: 45px;
-        padding-top: 5px;
-        font-size: 11px;
+      a{
+        text-decoration: none;
+        .group__name{
+          padding-top: 20px;
+          font-size: 15px;
+          color: white;
+        }
+        .group__new-message{
+          height: 45px;
+          padding-top: 5px;
+          font-size: 11px;
+          color: white;
+
+        }
       }
     }
   }
