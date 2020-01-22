@@ -1,5 +1,4 @@
 .side-bar
-
   .side-bar__user-name
     .side-bar__user-name__top-items
       .side-bar__user-name__top-items__name
@@ -13,8 +12,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__new-message
-            メッセージはありません。
+            = group.show_last_message

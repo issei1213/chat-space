@@ -1,0 +1,25 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__top-left
+      .chat-main__group-info__top-left__group-name
+        = @group.name
+
+      .chat-main__group-info__top-left__group-member
+        グループ参加者:
+        - @group.users.each do |user|
+          =user.name
+
+    = link_to 'Edit', edit_group_path(@group.id), class: "chat-main__group-info__top-right"
+
+  .chat-main__message-list
+    = render @messages
+
+  .chat-main__message-form
+    = form_for [@group, @message], html: {class:'chat-main__message-form__bottom-items-left'} do |f|
+      = f.text_field :content, class: "chat-main__message-form__bottom-items-left__message", placeholder: "type a message"
+      .form__mask
+        = f.label :image, class: "form__mask__image" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'chat-main__message-form__bottom-items-left__send'
+
