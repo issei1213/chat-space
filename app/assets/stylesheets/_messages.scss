@@ -51,6 +51,7 @@
   &__group-list{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: auto;
     .group{
       height: 65px;
       margin: 0px 20px 0px 20px;
