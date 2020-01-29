@@ -32,21 +32,20 @@ $(function(){
 
   var buildHTML = function(message){
     if(message.content && message.image) {
-      var html = `<div class="message" data-message-id=${message.id}>
+      var html = `<div class="message" data-message-id=${message.id}></div>
       <div class="chat-main__message-list__middle-items-top">
-      <div class="chat-main__message-list__middle-items-top__user-name">
-            ${message.user_name}
-            </div>
-          <div class="chat-main__message-list__middle-items-top__send-datetime">
-          ${message.created_at}
-            </div>
-          </div>
-        <div class="chat-main__message-list__middle-items-message">
-        <p class="lower-message__content">
-            ${message.content}
-          </p>
+        <div class="chat-main__message-list__middle-items-top__user-name">
+          ${message.user_name}
         </div>
-        <img src= ${message.image},class = "lower-message__image" >
+        <div class="chat-main__message-list__middle-items-top__send-datetime">
+          ${message.created_at}
+        </div>
+      </div>
+      <div class="chat-main__message-list__middle-items-message">
+        <p class="lower-message__content">
+        ${message.content}
+        </p>
+        <img src= ${message.image} class="lower-message__image">
       </div>`
     } else if(message.content) {
       var html = `<div class="message" data-message-id=  ${message.id}  > 
