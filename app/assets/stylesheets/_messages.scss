@@ -54,7 +54,7 @@
     overflow: auto;
     .group{
       height: 65px;
-      margin: 0px 20px 0px 20px;
+      margin: 0px 20px 20px 20px;
       a{
         text-decoration: none;
         .group__name{
@@ -67,7 +67,6 @@
           padding-top: 5px;
           font-size: 11px;
           color: white;
-
         }
       }
     }
@@ -92,7 +91,6 @@
       }
       &__group-member{
         height: 20px;
-        margin-top: 15px;
         color: #999999;
         font-size: 12px;
         li{
