@@ -8,7 +8,9 @@ class GroupsController < ApplicationController
     @group.users << current_user      #配列に要素追加
   end
 
+
   def create                          #グループの新規登録・TB更新
+    binding.pry
     @group = Group.new(group_params)
     if @group.save
       redirect_to root_path, notice: 'グループを作成されました。'
